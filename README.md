@@ -1,6 +1,6 @@
-# Custom Video Player App
+# GiggleFlix
 
-This is a custom video player app built with React. It provides various features such as playing/pausing videos, seeking, adjusting volume, changing playback speed, toggling fullscreen mode, and more.
+GiggleFlix is a fun and interactive video player application. With features like playback controls, volume adjustment, speed control, and playlist management, GiggleFlix provides an enjoyable video watching experience.
 
 ## Features
 
@@ -29,6 +29,10 @@ This is a custom video player app built with React. It provides various features
 ## Playlist 
 
 In addition to the video player features mentioned above, this app also supports playlist management. You can reorder the videos in the playlist by simply dragging and dropping them to the desired position. This allows for easy customization of the playback order according to your preferences.
+
+## Demo
+
+Check out the demo of GiggleFlix [here](https://rigi-video-player-app-vrok.vercel.app).
 
 ## Usage
 
