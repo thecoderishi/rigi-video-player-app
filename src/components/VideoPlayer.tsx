@@ -37,7 +37,6 @@ const CustomVideoPlayer: React.FC<VideoPLayerInterface> = ({
   const [isMuted, setIsMuted] = useState<boolean>(true)
   const [speed, setSpeed] = useState<number>(playbackSpeed)
   const [showControls, setShowControls] = useState<boolean>(false)
-  const [duration, setDuration] = useState<number>(0)
   const [isFullScreen, setIsFullScreen] = useState<boolean>(false)
   const [isCursorVisible, setIsCursorVisible] = useState(true)
   const [isBuffering, setIsBuffering] = useState<boolean>(false)
@@ -77,12 +76,6 @@ const CustomVideoPlayer: React.FC<VideoPLayerInterface> = ({
       }
     }
   }, [])
-
-  // useEffect(() => {
-  //   if (videoRef.current) {
-  //     setDuration(videoRef.current.duration)
-  //   }
-  // }, [videoRef.current?.duration])
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
