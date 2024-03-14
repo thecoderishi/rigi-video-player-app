@@ -35,13 +35,13 @@ In addition to the video player features mentioned above, this app also supports
 1. Clone the repository:
 
 ```
-git clone <repository_url>
+git clone https://github.com/thecoderishi/rigi-video-player-app.git
 ```
 
 2. Navigate to the project directory:
 
 ```
-cd custom-video-player-app
+cd rigi-video-player-app
 ```
 
 
