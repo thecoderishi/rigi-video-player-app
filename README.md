@@ -1,30 +1,60 @@
-# React + TypeScript + Vite
+# Custom Video Player App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a custom video player app built with React. It provides various features such as playing/pausing videos, seeking, adjusting volume, changing playback speed, toggling fullscreen mode, and more.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Play/pause videos by clicking on the video or the play/pause button.
+- Seek forward or backward in the video using the skip buttons or by dragging the progress bar.
+- Adjust volume using the volume slider or arrow keys (up/down).
+- Toggle mute/unmute using the volume button or by pressing the 'M' key.
+- Change playback speed by selecting from the dropdown menu.
+- Enter or exit fullscreen mode by clicking the fullscreen button or pressing the 'F' key.
+- Automatically remember the playback time, mute status, and playback speed when refreshing the page.
+- Keyboard shortcuts for various actions.
 
-## Expanding the ESLint configuration
+## Keyboard Shortcuts
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+| Key       | Action                |
+|-----------|-----------------------|
+| Space     | Play/Pause            |
+| Arrow Left| Seek Backward (-5s)   |
+| Arrow Right| Seek Forward (+5s)    |
+| Arrow Up  | Increase Volume       |
+| Arrow Down| Decrease Volume       |
+| M         | Mute/Unmute           |
+| F         | Toggle Fullscreen     |
 
-- Configure the top-level `parserOptions` property like this:
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+## Playlist 
+
+In addition to the video player features mentioned above, this app also supports playlist management. You can reorder the videos in the playlist by simply dragging and dropping them to the desired position. This allows for easy customization of the playback order according to your preferences.
+
+## Usage
+
+1. Clone the repository:
+
+```
+git clone <repository_url>
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+2. Navigate to the project directory:
+
+```
+cd custom-video-player-app
+```
+
+
+3. Install dependencies:
+
+```
+npm install
+```
+
+4. Start the development server:
+
+```
+npm run dev
+```
+
+5. Open your browser and visit http://localhost:5173 to view the app.
