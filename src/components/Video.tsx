@@ -18,6 +18,7 @@ const Video: React.FC<Props> = ({
   return (
     <div className='video-container'>
       <video
+        aria-lebel='Video Player'
         style={{objectFit:'contain'}}
         ref={videoRef}
         src={videoSource}

@@ -44,9 +44,11 @@ const Controls: React.FC<Props> = (props) => {
   } = props
 
   return (
-    <div className="absolute bottom-0 w-full bg-gray-900 bg-opacity-50  p-2 gap-1">
+    <div aria-label='Video Controls' className="absolute bottom-0 w-full bg-gray-900 bg-opacity-50  p-2 gap-1">
       <div className="flex">
-        {currentTime && <span>{formatTime(currentTime)}</span>}
+        {currentTime && (
+          <span aria-label="Video Current Time">{formatTime(currentTime)}</span>
+        )}
         <input
           type="range"
           min={0}
@@ -54,33 +56,39 @@ const Controls: React.FC<Props> = (props) => {
           value={currentTime}
           onChange={handleSeek}
           className="flex-1 border-lime-600 border-1 w-full ml-2 mr-2"
+          aria-label="Video Timeline"
         />
         {videoRef.current && videoRef.current.duration && (
-          <span>{formatTime(videoRef.current.duration)}</span>
+          <span aria-label="Video Duration">
+            {formatTime(videoRef.current.duration)}
+          </span>
         )}
       </div>
       <div className="flex justify-between items-center">
         <div className="flex">
-          <button onClick={togglePlay}>
+          <button
+            aria-label={isPlaying ? "Pause" : "Play"}
+            onClick={togglePlay}
+          >
             {isPlaying ? (
               <Icon icon="mdi:pause" height={ICON_HEIGHT_WIDTH} />
             ) : (
               <Icon icon="mdi:play" height={ICON_HEIGHT_WIDTH} />
             )}
           </button>
-          <button onClick={() => handleSkip(-10)}>
+          <button aria-label="Skip Backward" onClick={() => handleSkip(-10)}>
             <Icon
               icon="fluent:skip-back-10-20-filled"
               height={ICON_HEIGHT_WIDTH}
             />
           </button>
-          <button onClick={() => handleSkip(10)}>
+          <button aria-label="Skip Forward" onClick={() => handleSkip(10)}>
             <Icon
               icon="fluent:skip-forward-10-20-filled"
               height={ICON_HEIGHT_WIDTH}
             />
           </button>
-          <button onClick={toggleMute}>
+          <button aria-label={isMuted ? "Unmute" : "Mute"} onClick={toggleMute}>
             {isMuted ? (
               <Icon icon="mdi:volume-off" height={ICON_HEIGHT_WIDTH} />
             ) : (
@@ -88,6 +96,7 @@ const Controls: React.FC<Props> = (props) => {
             )}
           </button>
           <input
+            aria-label="Volume Level"
             type="range"
             min={0}
             max={1}
@@ -99,6 +108,7 @@ const Controls: React.FC<Props> = (props) => {
         </div>
         <div className="flex">
           <select
+            aria-label="Playback Speed"
             value={speed}
             onChange={(e) => {
               e.preventDefault()
@@ -112,7 +122,7 @@ const Controls: React.FC<Props> = (props) => {
               </option>
             ))}
           </select>
-          <button onClick={toggleFullScreen}>
+          <button aria-label="Full Screen" onClick={toggleFullScreen}>
             {isFullScreen ? (
               <Icon
                 icon="material-symbols:fullscreen-exit"
